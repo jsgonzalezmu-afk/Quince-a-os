@@ -689,11 +689,11 @@ img { max-width: 100%; display: block; }
 
 .cd-num {
   font-family: var(--font-serif);
-  font-size: clamp(3.2rem, 9vw, 5.5rem);
+  font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 600;
   color: var(--pink-deep);
   line-height: 1;
-  min-width: 2ch;
+  min-width: 1.5ch;
   text-align: center;
   transition: transform 0.15s ease;
 }
