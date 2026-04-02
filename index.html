@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis XV Años — Isabella Echeverry Fuentes</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══════════════════════════ PANTALLA DE BIENVENIDA ══════════════════════════ -->
+  <div id="welcome-screen" class="welcome-screen">
+    <div class="petals-container" id="petals"></div>
+    <div class="welcome-bg-glow"></div>
+
+    <div class="welcome-content">
+      <p class="welcome-eyebrow">Con todo el amor del mundo</p>
+      <div class="welcome-name-wrap">
+        <h1 class="welcome-name">Isabella</h1>
+      </div>
+      <p class="welcome-lastname">Echeverry Fuentes</p>
+
+      <div class="welcome-divider">
+        <span class="wd-line"></span>
+        <span class="wd-icon">✦</span>
+        <span class="wd-line"></span>
+      </div>
+
+      <p class="welcome-invite-text">Quiero que seas parte de este<br/>momento tan importante para mí</p>
+      <p class="welcome-years">Mis XV Años</p>
+
+      <button class="enter-btn" id="enterBtn">
+        Ingresar
+        <svg class="btn-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════ SITIO PRINCIPAL ══════════════════════════ -->
+  <div id="main-site" class="main-site hidden">
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">Isabella <span>XV</span></a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#countdown">Cuenta Regresiva</a></li>
+          <li><a href="#parents">La Familia</a></li>
+          <li><a href="#event">El Evento</a></li>
+          <li><a href="#rsvp">Confirmar</a></li>
+          <li><a href="#gallery">Galería</a></li>
+          <li><a href="#share">Comparte</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ══ REPRODUCTOR FLOTANTE DE MÚSICA ══ -->
+    <!-- ⚠️ Pon tu archivo de música en la misma carpeta y nómbralo "musica.mp3" -->
+    <audio id="bgMusic" preload="none">
+      <source src="musica.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="floatingPlayer" class="floating-player hidden">
+      <div class="fp-vinyl" id="fpVinyl">
+        <div class="fp-vinyl-inner">♪</div>
+      </div>
+      <div class="fp-info">
+        <p class="fp-title">A Thousand Years</p>
+        <p class="fp-artist">Christina Perri</p>
+        <input type="range" class="fp-progress" id="fpProgress" value="0" min="0" max="100" step="0.1" />
+      </div>
+      <div class="fp-controls">
+        <button class="fp-btn" id="fpBack" aria-label="Retroceder 10s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/><text x="8" y="16" font-size="6" fill="currentColor" stroke="none" font-family="sans-serif">10</text></svg>
+        </button>
+        <button class="fp-btn fp-play-btn" id="fpPlay" aria-label="Play/Pausa">
+          <svg class="fp-icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="fp-icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+        <button class="fp-btn" id="fpForward" aria-label="Adelantar 10s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-3.5"/><text x="8" y="16" font-size="6" fill="currentColor" stroke="none" font-family="sans-serif">10</text></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- HERO — foto de Isabella como protagonista -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-overlay"></div>
+      <div class="floating-petals" id="heroPetals"></div>
+
+      <div class="hero-layout">
+        <div class="hero-text-col">
+          <p class="hero-eyebrow">Una noche mágica para celebrar</p>
+          <h1 class="hero-title">Isabella</h1>
+          <p class="hero-subtitle">Echeverry Fuentes</p>
+          <div class="hero-divider">
+            <span></span><span class="hd-diamond">◆</span><span></span>
+          </div>
+          <p class="hero-date">19 · Septiembre · 2026</p>
+          <p class="hero-tagline">«La vida es la fiesta más hermosa que existe»</p>
+          <a href="#event" class="hero-cta">Ver detalles del evento</a>
+        </div>
+
+        <div class="hero-photo-col">
+          <div class="hero-photo-frame">
+            <div class="hpf-ring hpf-r1"></div>
+            <div class="hpf-ring hpf-r2"></div>
+            <div class="hpf-img-wrap">
+              <img src="isabella.jpg" alt="Isabella Echeverry Fuentes" />
+            </div>
+            <div class="hpf-badge">
+              <span>XV</span>
+              <span class="hpf-badge-year">2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Desliza</span>
+        <i class="scroll-chevron"></i>
+      </div>
+    </section>
+
+    <!-- ══ CUENTA REGRESIVA ══ -->
+    <section id="countdown" class="countdown-section">
+      <div class="cd-inner">
+        <div class="section-header">
+          <span class="section-tag">El gran momento se acerca</span>
+          <h2 class="section-title">Cuenta Regresiva</h2>
+          <div class="section-divider"><span></span><em>✦</em><span></span></div>
+        </div>
+        <div class="countdown-wrap">
+          <div class="cd-card">
+            <span class="cd-num" id="cd-days">365</span>
+            <span class="cd-label">Días</span>
+          </div>
+          <span class="cd-colon">:</span>
+          <div class="cd-card">
+            <span class="cd-num" id="cd-hours">00</span>
+            <span class="cd-label">Horas</span>
+          </div>
+          <span class="cd-colon">:</span>
+          <div class="cd-card">
+            <span class="cd-num" id="cd-minutes">00</span>
+            <span class="cd-label">Minutos</span>
+          </div>
+          <span class="cd-colon">:</span>
+          <div class="cd-card">
+            <span class="cd-num" id="cd-seconds">00</span>
+            <span class="cd-label">Segundos</span>
+          </div>
+        </div>
+        <p class="cd-note">19 de Septiembre, 2026 · 8:00 PM</p>
+      </div>
+    </section>
+
+    <!-- ══ SOBRE ISABELLA ══ -->
+    <section id="about" class="about-section">
+      <div class="about-inner">
+        <div class="about-image-wrap reveal-left">
+          <div class="about-img-frame">
+            <img src="isabella.jpg" alt="Isabella Echeverry Fuentes" class="about-photo" />
+            <div class="fc tl"></div><div class="fc tr"></div>
+            <div class="fc bl"></div><div class="fc br"></div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <span class="section-tag">Quien celebra</span>
+          <h2 class="about-name">Isabella<br/><span>Echeverry Fuentes</span></h2>
+          <div class="section-divider left-div"><span></span><em>✦</em><span></span></div>
+          <p class="about-para">
+            Con el corazón lleno de alegría y gratitud, celebro el comienzo de una nueva y hermosa etapa de mi vida.
+            Quince años de risas, sueños, aprendizajes y momentos que guardaré por siempre.
+          </p>
+          <p class="about-para">
+            Este día es tan especial porque lo compartiré con quienes más amo.
+            Gracias por ser parte de mi historia.
+          </p>
+          <div class="about-quote">
+            <span class="qm">"</span>
+            <p>Que la vida me siga regalando momentos tan hermosos como este</p>
+            <span class="qm qm-close">"</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SECCIÓN PADRES ══ -->
+    <section id="parents" class="parents-section">
+      <div class="parents-bg-deco">
+        <span class="p-blob pb1"></span>
+        <span class="p-blob pb2"></span>
+      </div>
+      <div class="parents-inner">
+        <div class="section-header reveal">
+          <span class="section-tag">Con todo su amor</span>
+          <h2 class="section-title">David y Eliana</h2>
+          <div class="section-divider"><span></span><em>✦</em><span></span></div>
+        <div class="parents-message reveal">
+          <div class="pm-border">
+            <p class="pm-text">
+              Se complacen en invitarte a compartir<br/>
+              la celebración de los XV años de su hija
+            </p>
+            <p class="pm-name">Isabella Echeverry Fuentes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ EL EVENTO ══ -->
+    <section id="event" class="event-section">
+      <div class="event-bg-overlay"></div>
+      <div class="event-inner">
+        <div class="section-header light-header reveal">
+          <span class="section-tag">Te esperamos con los brazos abiertos</span>
+          <h2 class="section-title">El Gran Evento</h2>
+          <div class="section-divider"><span></span><em>✦</em><span></span></div>
+        </div>
+        <div class="event-cards event-cards-two">
+          <div class="event-card event-card-featured reveal">
+            <div class="ec-crown">✦ XV ✦</div>
+            <div class="ec-icon">🎊</div>
+            <h3 class="ec-title">Recepción y Fiesta</h3>
+            <div class="ec-detail"><span class="dl">Fecha</span><span class="dv">19 de Septiembre, 2026</span></div>
+            <div class="ec-detail"><span class="dl">Hora</span><span class="dv">8:00 PM</span></div>
+            <div class="ec-detail"><span class="dl">Lugar</span><span class="dv">Salón XXX<br/>XXXX</span></div>
+            <div class="ec-detail"><span class="dl">Dress Code</span><span class="dv">Formal / Cocktail</span></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Av+Las+Rosas+456"
+               target="_blank" rel="noopener" class="maps-btn maps-btn-gold-solid">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Ir a la dirección
+            </a>
+          </div>
+
+          <div class="event-card reveal">
+            <div class="ec-icon">🎁</div>
+            <h3 class="ec-title">Mesa de Regalos</h3>
+            <div class="ec-detail"><span class="dl">Lluvia de sobres</span><span class="dv">Lluvia de sobres<br/>bienvenida con amor ✉️</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CONFIRMAR ASISTENCIA ══ -->
+    <section id="rsvp" class="rsvp-section">
+      <div class="rsvp-inner reveal">
+        <div class="section-header">
+          <span class="section-tag">¡Te esperamos!</span>
+          <h2 class="section-title">Confirma tu Asistencia</h2>
+          <div class="section-divider"><span></span><em>✦</em><span></span></div>
+          <p class="section-desc">Por favor confirma tu asistencia antes del <strong>1 de Septiembre, 2026</strong></p>
+        </div>
+        <div class="rsvp-box">
+          <p class="rsvp-box-text">
+            Escríbenos directamente por WhatsApp con tu nombre y número de acompañantes para confirmar tu lugar en esta celebración especial.
+          </p>
+          <!-- ⚠️ Reemplaza 521XXXXXXXXXX con el número real (código de país + número, sin espacios ni +) -->
+          <a href="https://wa.me/521XXXXXXXXXX?text=Hola!%20Confirmo%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Isabella%20%F0%9F%8C%B8%20Mi%20nombre%20es%3A%20"
+             target="_blank" rel="noopener" class="whatsapp-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="wa-icon">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.112.544 4.1 1.497 5.834L.057 23.514a.5.5 0 0 0 .613.613l5.68-1.44A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.802 9.802 0 0 1-5.006-1.373l-.358-.214-3.713.941.957-3.598-.234-.372A9.784 9.784 0 0 1 2.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/>
+            </svg>
+            Confirmar por WhatsApp
+          </a>
+          <p class="rsvp-alt-note">También puedes llamar o escribir al número de los papás</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ GALERÍA — ROLLO / CARRUSEL ══ -->
+    <section id="gallery" class="gallery-section">
+      <div class="section-header reveal">
+        <span class="section-tag">Mis recuerdos favoritos</span>
+        <h2 class="section-title">Galería</h2>
+        <div class="section-divider"><span></span><em>✦</em><span></span></div>
+        <p class="section-desc">Momentos que han marcado mi vida y que llevaré siempre en el corazón</p>
+      </div>
+
+      <div class="gallery-reel-wrap">
+        <button class="reel-arrow reel-prev" id="reelPrev" aria-label="Anterior">&#8249;</button>
+        <div class="gallery-reel" id="galleryReel">
+          <div class="reel-item" data-label="Isabella Echeverry Fuentes">
+            <img src="isabella.jpg" alt="Isabella" />
+            <div class="reel-label">Isabella Echeverry Fuentes</div>
+          </div>
+          <div class="reel-item" data-label="Recuerdos de infancia">
+            <div class="reel-placeholder g2"><span class="g-icon">🌷</span><span class="g-txt">Foto 2</span></div>
+            <div class="reel-label">Recuerdos de infancia</div>
+          </div>
+          <div class="reel-item" data-label="Con mis amigos">
+            <div class="reel-placeholder g3"><span class="g-icon">✨</span><span class="g-txt">Foto 3</span></div>
+            <div class="reel-label">Con mis amigos</div>
+          </div>
+          <div class="reel-item" data-label="En familia">
+            <div class="reel-placeholder g4"><span class="g-icon">💐</span><span class="g-txt">Foto 4</span></div>
+            <div class="reel-label">En familia</div>
+          </div>
+          <div class="reel-item" data-label="Mi quinceañera">
+            <div class="reel-placeholder g5"><span class="g-icon">👑</span><span class="g-txt">Foto 5</span></div>
+            <div class="reel-label">Mi quinceañera</div>
+          </div>
+          <div class="reel-item" data-label="Momentos especiales">
+            <div class="reel-placeholder g2"><span class="g-icon">🌸</span><span class="g-txt">Foto 6</span></div>
+            <div class="reel-label">Momentos especiales</div>
+          </div>
+        </div>
+        <button class="reel-arrow reel-next" id="reelNext" aria-label="Siguiente">&#8250;</button>
+      </div>
+      <div class="reel-dots" id="reelDots"></div>
+    </section>
+
+    <!-- ══ COMPARTE NUESTRAS FOTOS ══ -->
+    <section id="share" class="share-section">
+      <div class="share-inner reveal">
+        <div class="section-header">
+          <span class="section-tag">Juntos hacemos el recuerdo</span>
+          <h2 class="section-title">Compárteme nuestras fotos</h2>
+          <div class="section-divider"><span></span><em>✦</em><span></span></div>
+          <p class="section-desc">Sube todas las fotos que tenemos juntos para que podamos guardar estos momentos para siempre</p>
+        </div>
+        <div class="share-box">
+          <div class="share-icon-wrap">
+            <span class="share-big-icon">📸</span>
+          </div>
+          <p class="share-text">
+            Cada foto que compartas se convertirá en un recuerdo eterno.<br/>
+            ¡Gracias por capturar estos momentos con nosotros!
+          </p>
+          <!-- ⚠️ Reemplaza el href con el enlace real de tu Google Drive o carpeta compartida -->
+          <a href="https://drive.google.com/drive/folders/XXXXXXXXXX"
+             target="_blank" rel="noopener" class="share-drive-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="drive-icon">
+              <path d="M6.28 3L1 12.27 6.28 21h11.44L23 12.27 17.72 3H6.28zM12 16.5l-5.5-9.5h11L12 16.5z"/>
+            </svg>
+            Subir mis fotos al Drive
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-petals" id="footerPetals"></div>
+      <div class="footer-inner">
+        <div class="footer-ornament">✦ ✦ ✦</div>
+        <h2 class="footer-name">Isabella</h2>
+        <p class="footer-lastname">Echeverry Fuentes</p>
+        <p class="footer-date">19 · Septiembre · 2026</p>
+        <div class="footer-divider"></div>
+        <p class="footer-tagline">Con amor y gratitud, te espero en mi gran celebración</p>
+      </div>
+    </footer>
+
+  </div><!-- /main-site -->
+
+  <script src="script.js"></script>
+</body>
+</html>
