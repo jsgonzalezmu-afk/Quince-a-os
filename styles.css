@@ -669,8 +669,8 @@ img { max-width: 100%; display: block; }
   background: var(--cream);
   border: 1px solid var(--beige-mid);
   border-radius: var(--radius);
-  padding: 2rem 1.5rem 1.5rem;
-  min-width: 120px;
+  padding: 1.2rem 0.8rem;
+  min-width: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
