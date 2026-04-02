@@ -669,8 +669,8 @@ img { max-width: 100%; display: block; }
   background: var(--cream);
   border: 1px solid var(--beige-mid);
   border-radius: var(--radius);
-  padding: 1.0rem 0.5rem;
-  min-width: 80px;
+  padding: 2rem 1.5rem 1.5rem;
+  min-width: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -689,11 +689,11 @@ img { max-width: 100%; display: block; }
 
 .cd-num {
   font-family: var(--font-serif);
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: clamp(3.2rem, 9vw, 5.5rem);
   font-weight: 600;
   color: var(--pink-deep);
   line-height: 1;
-  min-width: 0.5ch;
+  min-width: 2ch;
   text-align: center;
   transition: transform 0.15s ease;
 }
@@ -732,6 +732,7 @@ img { max-width: 100%; display: block; }
   color: var(--text-light);
   margin-top: 2rem;
 }
+
 
 /* ══════════════════════════════════════════════════════════════
    SOBRE ISABELLA
@@ -1572,7 +1573,7 @@ img { max-width: 100%; display: block; }
 
   /* Countdown */
   .cd-colon { display: none; }
-  .cd-card { min-width: 50px; padding: 1.2rem 0.7rem 0.9rem; }
+  .cd-card { min-width: 72px; padding: 1.2rem 0.7rem 0.9rem; }
 
   /* Padres */
   .parents-cards { flex-direction: column; align-items: center; }
